@@ -1,6 +1,21 @@
 const { db, Project, Task } = require('./setup');
 
 // Sample project data
+
+// Sample users (for when User model is added in step 5)
+const sampleUsers = [
+  {
+    username: "john_doe",
+    email: "john@example.com", 
+    password: "password123"
+  },
+  {
+    username: "jane_smith",
+    email: "jane@example.com",
+    password: "password123"
+  }
+];
+
 const sampleProjects = [
     {
         name: "Website Redesign",

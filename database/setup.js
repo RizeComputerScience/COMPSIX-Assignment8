@@ -66,13 +66,6 @@ const Task = db.define('Task', {
     }
 });
 
-// // Define relationships
-// User.hasMany(Project, { foreignKey: 'userId' });
-// Project.belongsTo(User, { foreignKey: 'userId' });
-// Project.hasMany(Task, { foreignKey: 'projectId' });
-// Task.belongsTo(Project, { foreignKey: 'projectId' });
-
-
 // Export for use in other files
 module.exports = { db, Project, Task };
 
