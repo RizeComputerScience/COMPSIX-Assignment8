@@ -6,19 +6,22 @@ const sampleProjects = [
         name: "Website Redesign",
         description: "Complete overhaul of company website with modern design",
         status: "active",
-        dueDate: new Date('2024-12-31')
+        dueDate: new Date('2024-12-31'),
+        userId: 1
     },
     {
-        name: "Mobile App Development",
+        name: "Mobile App Development", 
         description: "Build iOS and Android app for customer portal",
         status: "active",
-        dueDate: new Date('2024-11-15')
+        dueDate: new Date('2024-11-15'),
+        userId: 1
     },
     {
         name: "Marketing Campaign",
-        description: "Q4 social media and advertising campaign",
+        description: "Q4 social media and advertising campaign", 
         status: "planning",
-        dueDate: new Date('2024-10-01')
+        dueDate: new Date('2024-10-01'),
+        userId: 2
     }
 ];
 

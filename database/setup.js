@@ -28,6 +28,10 @@ const Project = db.define('Project', {
     },
     dueDate: {
         type: DataTypes.DATE
+    },
+    userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 });
 
@@ -61,6 +65,12 @@ const Task = db.define('Task', {
         allowNull: false
     }
 });
+
+// // Define relationships
+// User.hasMany(Project, { foreignKey: 'userId' });
+// Project.belongsTo(User, { foreignKey: 'userId' });
+// Project.hasMany(Task, { foreignKey: 'projectId' });
+// Task.belongsTo(Project, { foreignKey: 'projectId' });
 
 
 // Export for use in other files

@@ -48,10 +48,10 @@ A REST API for managing projects and tasks.
 ```plaintext
 task-management-api/
 ├── database/
-│   ├── setup.js          # Database setup and models
-│   └── seed.js           # Sample data
-├── server.js             # Main server file
-├── package.json          # Dependencies
-├── .env                  # Environment variables
-└── README.md            # This file
+│   ├── setup.js    # Database setup and models
+│   └── seed.js     # Sample data
+├── server.js       # Main server file
+├── package.json    # Dependencies
+├── .env            # Environment variables
+└── README.md       # This file
 ```
