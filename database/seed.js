@@ -1,5 +1,5 @@
 const { db, Project, Task } = require('./setup');
-
+const bcrypt = require('bcryptjs');
 // Sample project data
 
 // Sample users (for when User model is added in step 5)
@@ -98,6 +98,23 @@ async function seedDatabase() {
         await db.authenticate();
         console.log('Connected to database for seeding.');
         
+        // Try to seed users if User model exists (will be added in step 5)
+        try {
+            const { User } = require('./setup');
+            const bcrypt = require('bcryptjs');
+            const saltRounds = 10;
+            
+            // Hash passwords
+            for (let user of sampleUsers) {
+                user.password = await bcrypt.hash(user.password, saltRounds);
+            }
+            
+            await User.bulkCreate(sampleUsers);
+            console.log('Sample users inserted successfully.');
+        } catch (error) {
+            console.log('User model not found - skipping user seeding');
+        }
+
         // Insert sample projects
         await Project.bulkCreate(sampleProjects);
         console.log('Sample projects inserted successfully.');
